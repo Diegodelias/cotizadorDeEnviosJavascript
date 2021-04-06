@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador costo de envio</title>
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body >
+    <div class="  bg-gradient-to-r from-green-400 to-blue-500 w-full block  min-h-screen flex flex-col justify-center ">
+
+        <div class=" text-center m-0 p-0 bg-white  container mx-auto w-2/5 p-8 rounded-md shadow-lg  ">
+        <h2 class=" text-2xl  font-bold ">Cotizar costo de envio</h2>  
+        <form class="mt-10 max-w-lg mx-auto"  id="cotizar-envio">
+                  
+           
+
+                <div class="flex items-center mb-5">
+                    <label 
+                      class="font-bold  mr-2 w-15"
+                      for="origen"
+                    >Provincia origen:</label>
+                    <select class="flex-1 bg-gray-100 p-3 appearance-none border border-transparent focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent w-2/5 " id="origen">
+                        <option value="0" >- Seleccionar -</option>
+                       
+                    </select>
+                </div>
+
+
+                <div class="flex items-center mb-5">
+                    <label 
+                      class="font-bold mr-2 w-15"
+                      for="destino"
+                    >Provincia destino:</label>
+                    <select class="flex-1 bg-gray-100 p-3 appearance-none focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent w-2/5" id="destino">
+                        <option value= "0" >- Seleccionar -</option>
+                      
+                    </select>
+                </div>
+        
+                <div class="flex items-center mb-5">
+                    <label 
+                      class="font-bold mr-2 w-15"
+                      for="origen"
+                    >Peso máximo:</label>
+                    <select class="flex-1 bg-gray-100 p-3 appearance-none focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent"  id="peso">
+                        <option value="">- Seleccionar -</option>
+                        <option value="1">Hasta 1kg</option>
+                        <option value="5">Hasta 5kg</option>
+                        <option value="10">Hasta 10kg</option>
+                        <option value="15">Hasta 15kg</option>
+                        <option value="20">Hasta 20kg</option>
+                        <option value="25">Hasta 25kg</option>
+                    </select>
+                </div>
+           
+                <fieldset>
+                    <legend  class="text-base text-center w-full">¿Desea adicionar valor comercial de la mercancía?</legend>
+
+                    <div class="flex justify-around mt-5 w-2/5 mx-auto">
+                        <div>
+                            <label class="font-bold  uppercase mr-2">Si</label>
+                                <input type="radio" name="tipo" value="si" >
+                            </label>
+                        </div>
+                        <div>
+                            <label class="font-bold  uppercase mr-2">no</label>
+                                <input type="radio" name="tipo" value="no" checked >
+                            </label>
+                        </div>
+                    </div>
+            </fieldset>
+          
+         
+
+
+            <div class="flex items-center mb-5 mt-5 " id="valorMercancia">
+                <label 
+                  class="font-bold mr-2 w-15 "
+                  for="origen"
+                >Valor comercial de la mercacia:</label>
+                <input type="number " class="flex-1 bg-gray-100 p-3 appearance-none focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent w-1/3 border-solid border-solid border-4 border-light-blue-500" id="mercancia">
+             
+            </div>
+
+            <div id="cargando" class="hidden">
+                <div class="spinner">
+                  <div class="rect1"></div>
+                  <div class="rect2"></div>
+                  <div class="rect3"></div>
+                  <div class="rect4"></div>
+                  <div class="rect5"></div>
+              </div>
+          </div>
+
+            <div id="resultado"></div>
+
+            <div id="resultado"></div>
+            <div class="flex  justify-center py-4">
+                <button 
+                  type="submit" 
+                  class="mx-auto bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-20 rounded"
+                  >cotizar  envio
+              </button>
+            </div>
+
+         
+    
+          
+    
+
+
+        </form>
+
+    </div>
+       
+
+    </div>
+    
+  <script src="js/cotizar.js"></script>
+</body>
+</html>
+

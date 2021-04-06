@@ -1,0 +1,9 @@
+.ocultar{
+    /* display: none; */
+    visibility: hidden;
+}
+.mostrar{
+    /* display:block; */
+
+    visibility: visible;
+}
